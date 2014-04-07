@@ -1,0 +1,35 @@
+{
+    "name": "each-module",
+    "version": "0.0.0",
+
+    "description": "Execute a function on each module in a directory",
+    "keywords": [ "each", "module", "loop" ],
+    "author": "Rowan Manning (http://rowanmanning.com/)",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowanmanning/each-module.git"
+    },
+    "homepage": "https://github.com/rowanmanning/each-module",
+    "bugs": "https://github.com/rowanmanning/each-module/issues",
+    "license": "MIT",
+
+    "engines": {
+        "node": ">=0.10"
+    },
+    "dependencies": {
+        "glob": "~3.2"
+    },
+    "devDependencies": {
+        "jshint": "~2.5",
+        "mocha": "~1.18",
+        "mockery": "~1.4",
+        "proclaim": "~2.0",
+        "sinon": "~1.9"
+    },
+
+    "main": "./lib/each-module.js",
+    "scripts": {
+        "test": "make test"
+    }
+}
