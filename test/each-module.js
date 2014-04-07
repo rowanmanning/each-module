@@ -19,20 +19,23 @@ describe('each-module', function () {
         glob = {};
         mockery.registerMock('glob', glob);
         glob.sync = sinon.stub();
-        glob.sync.withArgs('foo/**/*.js').returns([
+        glob.sync.withArgs('foo/**/*.{js,coffee}').returns([
             'foo/bar.js',
             'foo/baz.js',
-            'foo/qux/qux.js'
+            'foo/qux/qux.js',
+            'foo/hello.coffee'
         ]);
 
         mods = {
             bar: {bar: true},
             baz: {baz: true},
-            qux: {qux: true}
+            qux: {qux: true},
+            hello: {hello: true}
         };
         mockery.registerMock('foo/bar.js', mods.bar);
         mockery.registerMock('foo/baz.js', mods.baz);
         mockery.registerMock('foo/qux/qux.js', mods.qux);
+        mockery.registerMock('foo/hello.coffee', mods.hello);
 
         path = {};
         mockery.registerMock('path', path);
@@ -41,6 +44,7 @@ describe('each-module', function () {
         path.relative.withArgs('foo', 'foo/bar.js').returns('bar.js');
         path.relative.withArgs('foo', 'foo/baz.js').returns('baz.js');
         path.relative.withArgs('foo', 'foo/qux/qux.js').returns('qux/qux.js');
+        path.relative.withArgs('foo', 'foo/hello.coffee').returns('hello.coffee');
 
         eachModule = require('../lib/each-module');
     });
@@ -67,19 +71,21 @@ describe('each-module', function () {
 
     it('should glob for node modules in the expected directory', function () {
         eachModule('foo', function () {});
-        assert.strictEqual(glob.sync.withArgs('foo/**/*.js').callCount, 1);
+        assert.strictEqual(glob.sync.withArgs('foo/**/*.{js,coffee}').callCount, 1);
     });
 
     it('should call `fn` for each file in the directory', function () {
         var fn = sinon.spy();
         eachModule('foo', fn);
-        assert.strictEqual(fn.callCount, 3);
-        assert.strictEqual(fn.firstCall.args[0], 'bar');
-        assert.strictEqual(fn.firstCall.args[1], mods.bar);
-        assert.strictEqual(fn.secondCall.args[0], 'baz');
-        assert.strictEqual(fn.secondCall.args[1], mods.baz);
-        assert.strictEqual(fn.thirdCall.args[0], 'qux/qux');
-        assert.strictEqual(fn.thirdCall.args[1], mods.qux);
+        assert.strictEqual(fn.callCount, 4);
+        assert.strictEqual(fn.getCall(0).args[0], 'bar');
+        assert.strictEqual(fn.getCall(0).args[1], mods.bar);
+        assert.strictEqual(fn.getCall(1).args[0], 'baz');
+        assert.strictEqual(fn.getCall(1).args[1], mods.baz);
+        assert.strictEqual(fn.getCall(2).args[0], 'qux/qux');
+        assert.strictEqual(fn.getCall(2).args[1], mods.qux);
+        assert.strictEqual(fn.getCall(3).args[0], 'hello');
+        assert.strictEqual(fn.getCall(3).args[1], mods.hello);
     });
 
 });
