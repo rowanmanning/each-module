@@ -18,14 +18,14 @@
         "node": ">=0.10"
     },
     "dependencies": {
-        "glob": "~3.2"
+        "glob": "~5.0"
     },
     "devDependencies": {
-        "jshint": "~2.5",
-        "mocha": "~1.18",
+        "jshint": "~2.6",
+        "mocha": "~2.2",
         "mockery": "~1.4",
         "proclaim": "~2.0",
-        "sinon": "~1.9"
+        "sinon": "~1.14"
     },
 
     "main": "./lib/each-module.js",
