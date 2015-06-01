@@ -81,17 +81,28 @@ describe('each-module', function () {
     it('should call `fn` for each file in the directory', function () {
         var fn = sinon.spy();
         eachModule('foo', fn);
+
         assert.strictEqual(fn.callCount, 5);
+
         assert.strictEqual(fn.getCall(0).args[0], 'bar');
         assert.strictEqual(fn.getCall(0).args[1], mods.bar);
+        assert.strictEqual(fn.getCall(0).args[2], 'foo/bar.js');
+
         assert.strictEqual(fn.getCall(1).args[0], 'baz');
         assert.strictEqual(fn.getCall(1).args[1], mods.baz);
+        assert.strictEqual(fn.getCall(1).args[2], 'foo/baz.js');
+
         assert.strictEqual(fn.getCall(2).args[0], 'qux/qux');
         assert.strictEqual(fn.getCall(2).args[1], mods.qux);
+        assert.strictEqual(fn.getCall(2).args[2], 'foo/qux/qux.js');
+
         assert.strictEqual(fn.getCall(3).args[0], 'hello');
         assert.strictEqual(fn.getCall(3).args[1], mods.hello);
+        assert.strictEqual(fn.getCall(3).args[2], 'foo/hello.coffee');
+
         assert.strictEqual(fn.getCall(4).args[0], 'data');
         assert.strictEqual(fn.getCall(4).args[1], mods.data);
+        assert.strictEqual(fn.getCall(4).args[2], 'foo/data.json');
     });
 
 });
