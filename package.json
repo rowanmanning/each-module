@@ -21,6 +21,7 @@
         "glob": "^5"
     },
     "devDependencies": {
+        "jscs": "^1",
         "jshint": "^2",
         "mocha": "^2",
         "mockery": "~1.4",

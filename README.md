@@ -56,7 +56,7 @@ To contribute to EachModule, clone this repo locally and commit your code on a s
 Please write unit tests for your code, and check that everything works by running the following before opening a pull-request:
 
 ```sh
-make lint test
+make ci
 ```
 
 
