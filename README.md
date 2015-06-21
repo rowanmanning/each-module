@@ -12,9 +12,10 @@ Execute a function on each module in a directory.
 [![MIT licensed][shield-license]][info-license]
 
 ```js
-eachModule('./examples', function (name, mod) {
+eachModule('./examples', function (name, mod, file) {
     // name = the name of the loaded module
     // mod  = the module's exports
+    // file = the absolute path of the loaded module
 });
 ```
 
@@ -38,10 +39,11 @@ var eachModule = require('each-module');
 
 // Find/load all JavaScript/CoffeeScript modules
 // in the `examples` folder
-eachModule('./examples', function (name, mod) {
+eachModule('./examples', function (name, mod, file) {
     // This function is run for each module:
     // name = the name of the loaded module
     // mod  = the module's exports
+    // file = the absolute path of the loaded module
 });
 ```
 
