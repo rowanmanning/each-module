@@ -1,6 +1,10 @@
 
 # History
 
+## 1.2.0 (2015-06-21)
+
+  * Pass the absolute file path of modules to the handler
+
 ## 1.1.1 (2015-06-21)
 
   * Update dependencies
