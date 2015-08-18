@@ -1,6 +1,11 @@
 
 # History
 
+## 1.2.1 (2015-08-18)
+
+  * Update dependencies
+  * Add code coverage reporting
+
 ## 1.2.0 (2015-06-21)
 
   * Pass the absolute file path of modules to the handler
