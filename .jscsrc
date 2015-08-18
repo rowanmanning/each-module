@@ -14,6 +14,8 @@
 	"disallowQuotedKeysInObjects": true,
 	"disallowSpaceAfterObjectKeys": true,
 	"disallowSpaceAfterPrefixUnaryOperators": true,
+	"disallowSpaceBeforeComma": true,
+	"disallowSpaceBeforeSemicolon": true,
 	"disallowSpacesInCallExpression": true,
 	"disallowTrailingComma": true,
 	"disallowTrailingWhitespace": true,
@@ -31,6 +33,7 @@
 	],
 	"requireLineBreakAfterVariableAssignment": true,
 	"requireLineFeedAtFileEnd": true,
+	"requireObjectKeysOnNewLine": true,
 	"requireParenthesesAroundIIFE": true,
 	"requireSemicolons": true,
 	"requireSpaceAfterBinaryOperators": true,
@@ -52,8 +55,6 @@
 	"validateQuoteMarks": "'",
 
 	"excludeFiles": [
-		"example/full/public/**",
-		"example/getting-started/public/**",
 		"node_modules/**"
 	]
 }
