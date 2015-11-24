@@ -1,9 +1,13 @@
 
 # History
 
+## 1.2.3 (2015-11-24)
+
+  * Add Node.js 5.x support
+
 ## 1.2.2 (2015-09-16)
 
-  * Add Node.js 4.0.0 support
+  * Add Node.js 4.x support
 
 ## 1.2.1 (2015-08-18)
 

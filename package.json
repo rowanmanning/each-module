@@ -1,6 +1,6 @@
 {
     "name": "each-module",
-    "version": "1.2.2",
+    "version": "1.2.3",
 
     "description": "Execute a function on each module in a directory",
     "keywords": [ "each", "module", "loop" ],
