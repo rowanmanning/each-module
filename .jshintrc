@@ -8,11 +8,11 @@
         "it": true
     },
     "browser": true,
-    "globalstrict": true,
     "latedef": "nofunc",
     "maxparams": 2,
     "maxdepth": 2,
     "maxstatements": 10,
     "maxcomplexity": 5,
-    "node": true
+    "node": true,
+    "strict": true
 }
