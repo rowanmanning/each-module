@@ -7,6 +7,7 @@ Execute a function on each module in a directory.
 [![NPM version][shield-npm]][info-npm]
 [![Node.js version support][shield-node]][info-node]
 [![Build status][shield-build]][info-build]
+[![Code coverage][shield-coverage]][info-coverage]
 [![Dependencies][shield-dependencies]][info-dependencies]
 [![MIT licensed][shield-license]][info-license]
 
@@ -71,11 +72,13 @@ Copyright &copy; 2014, Rowan Manning
 
 [npm]: https://npmjs.org/
 
+[info-coverage]: https://coveralls.io/github/rowanmanning/each-module
 [info-dependencies]: https://gemnasium.com/rowanmanning/each-module
 [info-license]: LICENSE
 [info-node]: package.json
 [info-npm]: https://www.npmjs.com/package/each-module
 [info-build]: https://travis-ci.org/rowanmanning/each-module
+[shield-coverage]: https://img.shields.io/coveralls/rowanmanning/each-module.svg
 [shield-dependencies]: https://img.shields.io/gemnasium/rowanmanning/each-module.svg
 [shield-license]: https://img.shields.io/badge/license-MIT-blue.svg
 [shield-node]: https://img.shields.io/badge/node.js%20support-0.10–5-brightgreen.svg
