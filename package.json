@@ -16,7 +16,7 @@
   "bugs": "https://github.com/rowanmanning/each-module/issues",
   "license": "MIT",
   "engines": {
-    "node": ">=0.10"
+    "node": ">=4"
   },
   "dependencies": {
     "glob": "^7.1.2"

@@ -11,12 +11,6 @@ matrix:
 
     # Run tests with varying Node.js versions
 
-    - node_js: '0.10'
-      env: NODE=0.10
-
-    - node_js: '0.12'
-      env: NODE=0.12
-
     - node_js: '4'
       env: NODE=4
 

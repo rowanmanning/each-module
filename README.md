@@ -31,7 +31,7 @@ eachModule('./examples', function (name, mod, file) {
 
 EachModule requires the following to run:
 
-  * [Node.js] 0.10+
+  * [Node.js] 4+
   * [npm] (normally comes with Node.js)
 
 
@@ -92,6 +92,6 @@ Copyright &copy; 2014–2017, Rowan Manning
 [shield-coverage]: https://img.shields.io/coveralls/rowanmanning/each-module.svg
 [shield-dependencies]: https://img.shields.io/gemnasium/rowanmanning/each-module.svg
 [shield-license]: https://img.shields.io/badge/license-MIT-blue.svg
-[shield-node]: https://img.shields.io/badge/node.js%20support-0.10–8-brightgreen.svg
+[shield-node]: https://img.shields.io/badge/node.js%20support-4–8-brightgreen.svg
 [shield-npm]: https://img.shields.io/npm/v/each-module.svg
 [shield-build]: https://img.shields.io/travis/rowanmanning/each-module/master.svg
