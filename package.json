@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@rowanmanning/eslint-config": "^1.0.0",
+    "@rowanmanning/make": "^1.0.1",
     "eslint": "^4.10.0",
     "istanbul": "~0.4",
     "mocha": "^2",

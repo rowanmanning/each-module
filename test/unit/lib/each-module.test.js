@@ -1,5 +1,3 @@
-// jshint maxstatements: false
-// jscs:disable disallowMultipleVarDecl, maximumLineLength
 'use strict';
 
 var assert = require('proclaim');
@@ -53,7 +51,7 @@ describe('each-module', function() {
 		path.relative.withArgs('foo', 'foo/hello.coffee').returns('hello.coffee');
 		path.relative.withArgs('foo', 'foo/data.json').returns('data.json');
 
-		eachModule = require('../lib/each-module');
+		eachModule = require('../../../lib/each-module');
 	});
 
 	afterEach(function() {
