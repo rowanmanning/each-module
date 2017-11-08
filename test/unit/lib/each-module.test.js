@@ -1,16 +1,16 @@
 'use strict';
 
-var assert = require('proclaim');
-var mockery = require('mockery');
-var sinon = require('sinon');
+const assert = require('proclaim');
+const mockery = require('mockery');
+const sinon = require('sinon');
 
-describe('each-module', function() {
-	var eachModule;
-	var glob;
-	var mods;
-	var path;
+describe('each-module', () => {
+	let eachModule;
+	let glob;
+	let mods;
+	let path;
 
-	beforeEach(function() {
+	beforeEach(() => {
 		mockery.enable({
 			useCleanCache: true,
 			warnOnUnregistered: false,
@@ -54,33 +54,33 @@ describe('each-module', function() {
 		eachModule = require('../../../lib/each-module');
 	});
 
-	afterEach(function() {
+	afterEach(() => {
 		mockery.disable();
 	});
 
-	it('should be a function', function() {
+	it('should be a function', () => {
 		assert.isFunction(eachModule);
 	});
 
-	it('should error if called with an invalid `path` argument', function() {
-		assert.throws(function() {
-			eachModule(null, function() {});
+	it('should error if called with an invalid `path` argument', () => {
+		assert.throws(() => {
+			eachModule(null, () => {});
 		}, /should be a string/i);
 	});
 
-	it('should error if called with an invalid `fn` argument', function() {
-		assert.throws(function() {
+	it('should error if called with an invalid `fn` argument', () => {
+		assert.throws(() => {
 			eachModule('foo', null);
 		}, /should be a function/i);
 	});
 
-	it('should glob for node modules in the expected directory', function() {
-		eachModule('foo', function() {});
+	it('should glob for node modules in the expected directory', () => {
+		eachModule('foo', () => {});
 		assert.strictEqual(glob.sync.withArgs('foo/**/*.{js,json,coffee}').callCount, 1);
 	});
 
-	it('should call `fn` for each file in the directory', function() {
-		var fn = sinon.spy();
+	it('should call `fn` for each file in the directory', () => {
+		const fn = sinon.spy();
 		eachModule('foo', fn);
 
 		assert.strictEqual(fn.callCount, 5);
