@@ -1,6 +1,5 @@
 
-EachModule
-==========
+# EachModule
 
 Execute a function on each module in a directory.
 
@@ -20,18 +19,31 @@ eachModule('./examples', function (name, mod, file) {
 ```
 
 
-Install
--------
+## Table of Contents
 
-Install EachModule with [npm][npm]:
+  * [Requirements](#requirements)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [License](#license)
+
+
+## Requirements
+
+EachModule requires the following to run:
+
+  * [Node.js] 0.10+
+  * [npm] (normally comes with Node.js)
+
+
+## Usage
+
+Install EachModule with [npm]:
 
 ```sh
 npm install each-module
 ```
 
-
-Usage
------
+Use EachModule like this:
 
 ```js
 // Load EachModule
@@ -50,27 +62,26 @@ eachModule('./examples', function (name, mod, file) {
 **Note:** EachModule loads modules synchronously only, so it's best used in your application's startup – it's blocking.
 
 
-Contributing
-------------
+## Contributing
 
-To contribute to EachModule, clone this repo locally and commit your code on a separate branch.
-
-Please write unit tests for your code, and check that everything works by running the following before opening a pull-request:
+To contribute to EachModule, clone this repo locally and commit your code on a separate branch. Please write unit tests for your code, and run the linter before opening a pull-request:
 
 ```sh
-make ci
+make test    # run all tests
+make verify  # run all linters
 ```
 
 
-License
--------
+## License
 
-EachModule is licensed under the [MIT][info-license] license.  
-Copyright &copy; 2014, Rowan Manning
-
+EachModule is licensed under the [MIT] license.<br/>
+Copyright &copy; 2014–2017, Rowan Manning
 
 
-[npm]: https://npmjs.org/
+
+[mit]: LICENSE
+[node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/
 
 [info-coverage]: https://coveralls.io/github/rowanmanning/each-module
 [info-dependencies]: https://gemnasium.com/rowanmanning/each-module
