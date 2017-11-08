@@ -24,6 +24,7 @@ eachModule('./examples', function (name, mod, file) {
   * [Requirements](#requirements)
   * [Usage](#usage)
   * [Contributing](#contributing)
+  * [Support and Migration](#support-and-migration)
   * [License](#license)
 
 
@@ -72,6 +73,20 @@ make verify  # run all linters
 ```
 
 
+## Support and Migration
+
+EachModule major versions are normally supported for 6 months after their last minor release. This means that patch-level changes will be added and bugs will be fixed. The table below outlines the end-of-support dates for major versions, and the last minor release for that version.
+
+We also maintain a [migration guide](MIGRATION.md) to help you migrate.
+
+| :grey_question: | Major Version   | Last Minor Release | Node.js Versions | Support End Date |
+| :-------------- | :-------------- | :----------------- | :--------------- | :--------------- |
+| :heart:         | 2               | N/A                | 4+               | N/A              |
+| :hourglass:     | [1][1.x-branch] | 1.2                | 0.10–6           | 2018-07-08       |
+
+If you're opening issues related to these, please mention the version that the issue relates to.
+
+
 ## License
 
 EachModule is licensed under the [MIT] license.<br/>
@@ -79,6 +94,7 @@ Copyright &copy; 2014–2017, Rowan Manning
 
 
 
+[1.x-branch]: https://github.com/rowanmanning/each-module/tree/1.x
 [mit]: LICENSE
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/
