@@ -3,6 +3,9 @@
 
 Execute a function on each module in a directory.
 
+**NOTE: This project is no longer being maintained. I suggest using [@rowanmanning/require-all](https://github.com/rowanmanning/require-all) insead.**<br/>
+If you're interested in taking over maintenance of this repo, please contact me.
+
 [![NPM version][shield-npm]][info-npm]
 [![Node.js version support][shield-node]][info-node]
 [![Build status][shield-build]][info-build]
@@ -81,8 +84,8 @@ We also maintain a [migration guide](MIGRATION.md) to help you migrate.
 
 | :grey_question: | Major Version   | Last Minor Release | Node.js Versions | Support End Date |
 | :-------------- | :-------------- | :----------------- | :--------------- | :--------------- |
-| :heart:         | 2               | N/A                | 4+               | N/A              |
-| :hourglass:     | [1][1.x-branch] | 1.2                | 0.10–6           | 2018-07-08       |
+| :hourglass:     | 2               | 2.0                | 4+               | 2020-09-15       |
+| :skull:         | [1][1.x-branch] | 1.2                | 0.10–6           | 2018-07-08       |
 
 If you're opening issues related to these, please mention the version that the issue relates to.
 
